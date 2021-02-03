@@ -1,37 +1,23 @@
-class: fullscreen, bg-red
+class: frontpage
+<a href="/">back to home</a>
 
-# Welcome to General Assembly
-
-.image-one-fourth[![](../assets/ga-white.svg)]
-???
-
-- Good evening! I’d like to welcome everyone to General Assembly for intro to code. How’s everybody doing?
-- Introduce yourself
-- By show of hands, how many of you are familiar with General Assembly? (look around the room and thank those for coming back to General Assembly)
-- Welcome back and welcome to everyone who is on campus for their first time!
+<div>
+  <h2>User Experience Immersive </h2>
+  <hr/>
+  <h1>Intro to code</h1>
+</div>
 
 ---
 
 class: fullscreen, bg-black
 
-# Intro to coding
-
 ## HTML & CSS & bit of JavaScript
-
-.image-one-fourth[![](../assets/ga-white.svg)]
 
 ---
 
 # Goal
 
-By the end of this workshop, our goal is to build a simple **responsive** web page.
-
-[http://bit.ly/GAIntroToCode](http://bit.ly/GAIntroToCode)
-
-???
-
-- Does anyone know what `responsive` means?
-- Provide definition after taking participation: Essentially, you can think of `responsive` as meaning that the page adapts to the device that is viewing the page. All pages today should be build responsively, so we’re going to learn about this tonight.
+By the end of this workshop, our goal is to build a simple **responsive** web page 🚀.
 
 ---
 
@@ -86,33 +72,47 @@ Please, tell us the difference between:
 
 # The 3 Layers of the Web
 
-.image-third[![](https://mdn.mozillademos.org/files/13502/cake.png)]
-
----
-
-# The 3 Layers of the Web
+.row[
+.column[.image-third[![](https://mdn.mozillademos.org/files/13502/cake.png)]]
+.column[
 
 - **HTML** is the markup language that we use to structure and give meaning to our web content.
 - **CSS** is a language of style rules that we use to apply styling to our HTML content.
 - **JavaScript** is a scripting language that enables you to manipulate dynamically content and style.
+  ]
+  ]
 
 ---
 
 # How the Web works?
 
-.image-two-thirds[![](https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png)]
-
-???
-
-- Tonight we’re learning HTML & CSS, which fall under what we call `front-end web development`.
-- It essentially makes up the things that impact how things look to the use.
-- More specifically it includes structure and content (HTML), styling (CSS), and interactivity and - behavior (JavaScript).
-- We teach JavaScript in bootcamps and extensively in our courses, but tonight we’re focusing on HTML and CSS
-- Front-end development may also be called ‘client-side’ development
-- Back-end development is an entirely different area (which, again, we teach extensively in our immersive course, if you’re interested in learning about it)
-- There are a lot of languages that can be used here, but they essentially handle the ‘business logic’ of the application
-- May also have heard this referred to as ‘server-side’ development
-- Lines have blurred a bit between these neat categories over time, but these are the broad-stroke of how all these things fit into ‘web development’
+<div class="row">
+  <div>
+    <picture>
+      <img
+        src="https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png"
+        alt="Request and response cycle"
+      />
+    </picture>
+  </div>
+  <div>
+    <ol>
+      <li>Browser send a HTTP request to the server</li>
+      <li>
+        Requests for dynamic resources are forwarded to server-side code
+        (application)
+      </li>
+      <li>
+        Application interprets the request, reads required information from the
+        database
+      </li>
+      <li>Combines the retrieved data with HTML templates</li>
+      <li>Sends back a response containing the generated HTML</li>
+      <li>Browser read response and re render</li>
+      <li>Browser request static assets</li>
+    </ol>
+  </div>
+</div>
 
 ---
 
@@ -262,31 +262,27 @@ Elements can also have attributes, which look like this:
 
 ---
 
-# Images
+# Absolute vs relative paths
 
-```html
-<img
-  src="https://api.peteroftheday.com/random"
-  alt="A picture of Peter Martin"
-/>
+We can differentiate between an **absolute** URL and a **relative** URL by looking only at the path part of the URL.
+
+```js
+'./i-am-relative-path/filename.txt';
+// From my current position get to a directory and then get the file
+
 ```
 
-The above example shows very simple usage of the `<img>` element. The src attribute is required, and contains the path to the image you want to embed. The alt attribute contains a textual description of the image, which isn't mandatory but is incredibly useful for accessibility
+```js
+'../i-am-also-a-relative-path/filename.txt';
+// From my current position go up to my parent directory and
+// then to another directory and the get the file
 
----
-
-# Links
-
-```html
-<p>
-  I'm creating a link to
-  <a href="https://https://en.wikipedia.org/wiki/Main_Page">
-    Wikipedia homepage </a
-  >.
-</p>
 ```
 
-A basic link is created by wrapping the text or other content, you want to turn into a link inside an `<a>` element, and giving it an href attribute that will contain the web address you want the link to point to.
+```js
+'https://www.ga.com'; // I am an absolute path
+
+```
 
 ---
 
@@ -312,14 +308,15 @@ A basic link is created by wrapping the text or other content, you want to turn 
 ```html
 <head>
   <meta charset="utf-8" />
+  <meta name="author" content="Pedro Martin" />
+  <meta name="description" content="A Lesson about HTMLs" />
   <title>My test page</title>
 </head>
 ```
 
 - Can be thought of as the **brain** of the document
 - Its properties are not part of the physical layout of the page
-- Holds all of the properties
-  Ex. the document’s title
+- Holds all of the properties Ex. the document’s title
 
 ---
 
@@ -337,101 +334,6 @@ A basic link is created by wrapping the text or other content, you want to turn 
 
 ---
 
-class: fullscreen, bg-yellow
-
-# Let’s get writing!
-
----
-
-class: fullscreen, bg-pink
-
-# CSS
-
-## Cascade Style Sheets
-
-???
-
-- Now we’re moving on to the `presentation` or `styling` of our web page
-- Let’s break down what this name means
-
-  - “Cascading” refers to the ability to have rules in different places that can override other rules
-    - Why is this important? We’re going to touch on this a bit when we make our website responsive and we will see how styles are applied by priority
-  - “Style Sheets” is important in understanding these presentation concerns as separate (and often multiple) files
-  - We want to keep our presentation concerns in these style sheets, not in our HTML
-
----
-
-# Cascading Style Sheets (CSS)
-
-## How it looks?
-
-```html
-<h1>Hello World!</h1>
-<p>This is my first CSS example</p>
-```
-
-```css
-h1 {
-  color: blue;
-  background-color: yellow;
-  border: 1px solid black;
-}
-
-p {
-  color: red;
-}
-```
-
----
-
-# CSS Building blocks
-
-## Declarations
-
-.image-half[![](https://mdn.mozillademos.org/files/3665/css%20syntax%20-%20declaration.png)]
-
----
-
-# CSS Building blocks
-
-## Declaration blocks
-
-.image-half[![](https://mdn.mozillademos.org/files/3667/css%20syntax%20-%20declarations%20block.png)]
-
----
-
-# CSS Building blocks
-
-## Selectors and rules
-
-.image-half[![](https://mdn.mozillademos.org/files/3668/css%20syntax%20-%20ruleset.png)]
-
----
-
-# Absolute vs relative paths
-
-We can differentiate between an **absolute** URL and a **relative** URL by looking only at the path part of the URL.
-
-```js
-'./i-am-relative-path/filename.txt';
-// From my current position get to a directory and then get the file
-
-```
-
-```js
-'../i-am-also-a-relative-path/filename.txt';
-// From my current position go up to my parent directory and
-// then to another directory and the get the file
-
-```
-
-```js
-'https://www.ga.com'; // I am an absolute path
-
-```
-
----
-
 # Images
 
 Images are placed using the `<img>` tag.
@@ -439,10 +341,6 @@ Images are placed using the `<img>` tag.
 ```html
 <img src="img/image-name.jpg" alt="alternative text" />
 ```
-
----
-
-# Images
 
 The `img` tag requires a `src` attribute, which tells the browser where to find the image.
 The `src` points to a resource a bit like the `href` of an `<a>` tag.
@@ -455,29 +353,17 @@ The `src` points to a resource a bit like the `href` of an `<a>` tag.
 
 There are different approaches to specifying an image location
 
----
-
-# Images
-
 Inside webroot, a relative path could be used:
 
 ```html
 <img src="images/logo.png" />
 ```
 
----
-
-# Images
-
 ## Relative path
 
 ```html
 <img src="../images/logo.png" />
 ```
-
----
-
-# Images
 
 ## Absolute Path
 
@@ -554,37 +440,6 @@ There are four main image file formats:
 
 ---
 
-# What is the HTML head?
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>My test page</title>
-  </head>
-  <body>
-    <p>This is my page</p>
-  </body>
-</html>
-```
-
----
-
-# What is the HTML head?
-
-## Metadata
-
-```html
-<head>
-  <meta charset="utf-8" />
-  <meta name="author" content="Pedro Martin" />
-  <meta name="description" content="A Lesson about HTMLs" />
-</head>
-```
-
----
-
 # Applying CSS and JavaScript to HTML
 
 ```html
@@ -602,6 +457,21 @@ There are four main image file formats:
 ```html
 <html lang="en-GB"></html>
 ```
+
+---
+
+# Links
+
+```html
+<p>
+  I'm creating a link to
+  <a href="https://https://en.wikipedia.org/wiki/Main_Page">
+    Wikipedia homepage </a
+  >.
+</p>
+```
+
+A basic link is created by wrapping the text or other content, you want to turn into a link inside an `<a>` element, and giving it an href attribute that will contain the web address you want the link to point to.
 
 ---
 
@@ -660,6 +530,77 @@ There are four main image file formats:
   <footer>...</footer>
 </body>
 ```
+
+---
+
+class: fullscreen, bg-yellow
+
+# Let’s get writing!
+
+---
+
+class: fullscreen, bg-pink
+
+# CSS
+
+## Cascade Style Sheets
+
+???
+
+- Now we’re moving on to the `presentation` or `styling` of our web page
+- Let’s break down what this name means
+
+  - “Cascading” refers to the ability to have rules in different places that can override other rules
+    - Why is this important? We’re going to touch on this a bit when we make our website responsive and we will see how styles are applied by priority
+  - “Style Sheets” is important in understanding these presentation concerns as separate (and often multiple) files
+  - We want to keep our presentation concerns in these style sheets, not in our HTML
+
+---
+
+# Cascading Style Sheets (CSS)
+
+## How it looks?
+
+```html
+<h1>Hello World!</h1>
+<p>This is my first CSS example</p>
+```
+
+```css
+h1 {
+  color: blue;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+p {
+  color: red;
+}
+```
+
+---
+
+# CSS Building blocks
+
+## Declarations
+
+.image-half[![](https://mdn.mozillademos.org/files/3665/css%20syntax%20-%20declaration.png)]
+
+---
+
+# CSS Building blocks
+
+## Declaration blocks
+
+.image-half[![](https://mdn.mozillademos.org/files/3667/css%20syntax%20-%20declarations%20block.png)]
+
+---
+
+# CSS Building blocks
+
+## Selectors and rules
+
+.image-half[![](https://mdn.mozillademos.org/files/3668/css%20syntax%20-%20ruleset.png)]
 
 ---
 
