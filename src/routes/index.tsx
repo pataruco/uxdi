@@ -2,7 +2,7 @@ import React from 'react';
 import { createBrowserHistory } from 'history';
 import { Switch, Route, Router } from 'react-router-dom';
 import Home from '../pages/home';
-import { lessonRoutes, weekRoutes } from './config';
+import { lessonRoutes } from './config';
 import ErrorPage from '../pages/404';
 import '../styles/site-index.scss';
 
@@ -16,15 +16,10 @@ const LessonsRouteComponents = lessonRoutes.map(({ path, component }, key) => (
   <Route exact path={path} component={component} key={key} />
 ));
 
-const WeekRouteComponents = weekRoutes.map(({ path, component }, key) => (
-  <Route exact path={path} component={component} key={key} />
-));
-
 const Routes = () => (
   <CustomBrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
-      {WeekRouteComponents}
       {LessonsRouteComponents}
       <Route path="/*" component={ErrorPage} />
     </Switch>

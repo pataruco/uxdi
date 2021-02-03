@@ -6,19 +6,6 @@ import styled from 'styled-components';
 import Title from '../components/title';
 import Page from '../components/page';
 
-const Weeks = [
-  'HTML & CSS Basics',
-  'Box Model, CSS Selectors, Specificity & Floats',
-  'Flexbox & Positioning',
-  'Responsive Web development',
-  'Intro to JavaScript & Document Object Model (DOM)',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-];
-
 const StyledMain = styled.main`
   padding: 1.25rem;
 
@@ -32,17 +19,16 @@ const Home: React.FC = () => (
     <Title title="Home" />
     <Header />
     <StyledMain>
-      <h1>Welcome to FEWD London 🇬🇧 </h1>
+      <h1>Welcome to UXDI London 🇬🇧 </h1>
+      <h2>Intro to code day 💻 </h2>
       <nav>
         <ul>
-          {Weeks.map((week, i) => (
-            <li key={i}>
-              Week {i + 1}:{' '}
-              <Link key={i} to={`week-${i + 1}`}>
-                {week}
-              </Link>
-            </li>
-          ))}
+          <li>
+            Morning: <Link to="/morning">Intro to Code</Link>
+          </li>
+          <li>
+            Afternoon: <Link to="/afternoon">Software delivery</Link>
+          </li>
         </ul>
       </nav>
     </StyledMain>
