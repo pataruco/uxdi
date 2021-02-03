@@ -1,8 +1,12 @@
-class: fullscreen, bg-red
+class: frontpage
 
-# Welcome to General Assembly
+<a href="/">back to home</a>
 
-.image-one-fourth[![](../assets/ga-white.svg)]
+<div>
+  <h2>User Experience Immersive </h2>
+  <hr/>
+  <h1>Software delivery</h1>
+</div>
 
 ---
 
@@ -61,7 +65,7 @@ class: fullscreen, bg-black
 
 # What we do
 
-### How to know if the organisation have a good engineering culture
+### How to know if the organisation have a good software engineering culture
 
 .row[
 Test driven development (TDD) .image-one-fourth--align-left[![TDD](https://pataruco.s3.amazonaws.com/ga/uxdi/deployment.png)]
@@ -88,6 +92,10 @@ class: fullscreen, bg-teal
 ---
 
 # Buzzword Bingo
+
+In pairs, try to make a vertical or horizontal line with the meaning of the words.
+
+> Please, don't use the Internet on this one 🙏
 
 .table[
 
@@ -127,7 +135,45 @@ Lets talk about this ones
 
 # X Functional team
 
-.image-half[![x functionalteam](https://pataruco.s3.amazonaws.com/ga/uxdi/typical-x-team.png)]
+.row[
+.column[
+![x functionalteam](https://pataruco.s3.amazonaws.com/ga/uxdi/typical-x-team.png)
+
+]
+.column[
+
+- **Product Owner**: Responsible for setting the product vision, strategy and roadmap. Works closely with business stakeholders and cross-functional teams to define hypotheses, validate ideas and deliver products with the customer at the heart of it.
+
+- **Delivery Lead**: Enables outcomes. Manages the delivery of the product by ensuring the team uses an agile, user-centred approach, reports progress to stakeholders, manages risks, dependencies and handles escalations.
+
+- **Tech Lead**: Finds and implements the technical strategy for the solution and leads the engineering team to deliver a secure, robust and viable product which fits the organisation’s needs.
+
+- **Software Engineers**: Implement the technical solution by developing and designing quality code based on best practice with a focus on security, quality and accessibility.
+
+  ]
+  ]
+
+---
+
+# X Functional team
+
+.row[
+.column[
+![x functionalteam](https://pataruco.s3.amazonaws.com/ga/uxdi/typical-x-team.png)
+
+]
+.column[
+
+- **UX Designer**: An expert in empathy. Leads the team in having a deep understanding of the user needs. Conducts research, creating personas, mapping user journeys. Leads rapid prototyping and usability testing.
+
+- **User Interface / Product Designer**: Leads the design of the product and aligns the application of different brands with a systems thinking mindset. They create and implement a design system that provides efficiency and consistency of the product.
+
+- **Quality Assurance Lead**: Ensures the product is high quality through a variety of automated and manual approaches. Understands and champions assisted digital needs so the product is accessible to all.
+
+- **Insights Analyst**: Develops and implements a data strategy to be able to measure the performance of the service based on user and organisational needs. Communicates insights recommends ways to improve.
+
+  ]
+  ]
 
 ---
 
@@ -135,9 +181,7 @@ Lets talk about this ones
 
 ## Discovery & challenge:
 
-We investigate the technical requirements for the feature we are going to build
-
-we work with:
+We investigate the technical requirements for the feature we are going to build, we work with:
 
 - User experience designer
 - Product designer
@@ -188,3 +232,19 @@ Some Git jargon:
 ]
 
 ---
+
+# Git demo
+
+Brace yourselves
+
+---
+
+class: frontpage
+
+<a href="/">back to home</a>
+
+<div>
+  <h2>User Experience Immersive </h2>
+  <hr/>
+  <h1>End of presentation</h1>
+</div>
