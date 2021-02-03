@@ -7,7 +7,7 @@ export const lessonRoutes = [
     path: '/morning',
     component: () => (
       <>
-        <Title week={1} lesson={1} />
+        <Title title="Morning" />
         <SlidesDeck slidesDeckName="morning" />
       </>
     ),
@@ -16,7 +16,7 @@ export const lessonRoutes = [
     path: '/afternoon',
     component: () => (
       <>
-        <Title week={1} lesson={2} />
+        <Title title="Afternoon" />
         <SlidesDeck slidesDeckName="afternoon" />
       </>
     ),

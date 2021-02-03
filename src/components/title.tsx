@@ -29,7 +29,7 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
     case typeof title === 'string':
       component = (
         <Helmet>
-          <title>{title} | FEWD | GA London</title>
+          <title>{title} | UXDI Intro to code | GA London</title>
         </Helmet>
       );
       break;
@@ -37,7 +37,7 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
     default:
       component = (
         <Helmet>
-          <title>FEWD | GA London</title>
+          <title>UXDI Intro to code | GA London</title>
         </Helmet>
       );
       break;
