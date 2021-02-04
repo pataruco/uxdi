@@ -236,6 +236,7 @@ Some Git jargon:
 # Git demo
 
 Brace yourselves
+🚀
 
 ---
 
